@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+ width: 100vw;
+ height: 100vh;
+ background-image: linear-gradient(rgba(48, 35, 98, 0.9), rgba(48, 35, 98, 0.9)), url('../img/wallpaper.jpg');
+ background-size: cover;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+}
+/* --------------signupform part--------------------- */
+main{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+#course-enroll{
+    color: white;
+}
+.forms{
+    padding: 4em;
+    background-color: cadetblue;
+    border-radius: 10px;
+}
+.forms .course-registeration{
+    line-height: 3em;
+}
+.forms .course-registeration .main-form{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+.forms .course-registeration .main-form input{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+    padding: .1em;
+}
+.main-form #fullname{
+    margin-left: .5em;
+}
+.main-form #email{
+ margin-left: 2em;
+}
+.main-form #phonenumber{
+    margin-left: 1.7em;
+}
+.main-form #address{
+    margin-left: 0.9em;
+}
+#course-option{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    margin-left: 1.5em;
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+    width: 293px;
+    padding: .1em;
+}
+ button{
+    padding: 1em;
+    background: green;
+    color: white;
+    font-size: .5em;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 10em;
+    border: cadetblue;
+    border-radius: 100px;
+    cursor: pointer;
+}
+/* ---------------------navbar--------------------------- */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+   
+}
+nav .logo img{
+    height: 57px;
+}
+nav .navbar .nav-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+}
+nav .navbar .nav-menu a{
+ color: white;
+ text-decoration: none;
+ font-size: 1em;
+ font-weight: 600;
+ font-family: 'Montserrat Alternates', sans-serif;
+}
+.nav-menu a:hover{
+    border-bottom: 1px solid pink;
+}
+.ham i{
+    display: none !important;
+}
+
+/* ---------------------------mainwallpaper--------------------------- */
+main{
+    padding: 5em;
+}
+.main-landing{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 5em;
+}
+.main-landing .main-display {
+    align-self: end;
+    line-height: 3em;
+}
+.main-landing .main-display h1{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    font-size: 5.2em;
+    font-family: "Montserrat";
+}
+.main-landing .main-display h2{
+    color: #FFC107;
+    font-size: 3.2em;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+.main-landing .main-display p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.main-landing .main-image img{
+    height: 646px;
+    object-fit: cover;
+    position: relative;
+    top: 24%;
+    z-index: -1;
+}
+.main-landing .main-display button{
+    background: #FFC107;
+    box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.44);
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    width: 17em;
+    height: 3.5em;
+    color: #fff;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+.main-display button:active, .main-display button:hover{
+    color: #fff;
+    scale: translate(1.5s);
+}
+.course-section{
+    width: 100vw;
+    position: relative;
+    top: 7%;
+    background-color: #FFC107;
+    padding: 3em;
+}
+.course-details{
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.course-details .course{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 4em;
+}
+.course-details .course p{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+.course-details .course img{
+    height: 48px;
+    object-fit: fill;
+}
+.course-details .expert-instructor{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 4em;
+}
+.course-details .expert-instructor img{
+    height: 48px;
+    object-fit: fill;
+}
+.course-details .expert-instructor p{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+.course-details .lifetime-access{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 4em;
+}
+.course-details .lifetime-access img{
+    height: 48px;
+    object-fit: fill;
+}
+.course-details .lifetime-access p{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+@media (min-width: 320px) and (max-width: 480px){
+   html, body{
+    overflow-x: hidden;
+   }
+    nav{
+        display: grid !important;
+        row-gap: 3em;
+    }
+     .navbar{
+        display: none;
+     }
+    .navbar .nav-menu{
+      display: grid !important;
+      justify-content: center;
+      text-align: center;
+    } 
+    .ham i{
+        color: white;
+        font-size: 2.5em;
+        visibility: visible;
+        display: block !important;
+        position: absolute !important;
+        top: 3%;
+        left: 90%;
+      } 
+}

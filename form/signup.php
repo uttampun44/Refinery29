@@ -45,7 +45,7 @@
                      <label>Address:</label>
                      <input type="text" placeholder="Address" require id="address" name="address">
                      <br>
-                     <button name="submit" id="submit" name="submit" onclick="return refresh() ">Submit</button>
+                     <button name="submit" id="submit" onclick="return refresh()">Submit</button>
                 </form>
              
             </div>

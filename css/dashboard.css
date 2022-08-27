@@ -14,20 +14,38 @@ body{
 }
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background: white;
     border: 2px solid whitesmoke;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+nav .logo i{
+    font-size: 2em;
+    color: black;
 }
 nav .logo img{
  height: 80px; 
  object-fit: fill;
 }
 nav .nav-sign-out{
-  align-self: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 nav .nav-sign-out input{
     border-radius: 7em;
     border-color: linen;
+    display: none;
+}
+.nav-sign-out a{
+    color: black;
 }
 nav .nav-sign-out i{
     font-size: 2em;
@@ -51,4 +69,113 @@ main .side-bar ul{
 main .side-bar ul li a{
     text-decoration: none;
     color: #fff;
+}
+.form-message{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 4em;
+}
+.form-message .form-section{
+    background-color: white;
+    padding: 2em;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.form-message .form-section h1{
+    font-size: 2em;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+}
+.form-message .form-section i{
+    font-size: 2em;
+    background: #4466F2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.form-message .message-section{
+    background-color: white;
+    padding: 2em;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.form-message .message-section h2{
+    font-size: 2em;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+}
+.form-message .message-section i{
+    font-size: 2em;
+    background-color: #FFB822;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.form-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    width: 85%;
+    z-index: -1;
+    display: none;
+}
+.form-details table{
+    width: 80vw;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.form-details table th{
+    font-size: 1.5em;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+    padding: 1em;
+    background: rgb(179, 179, 179);
+}
+.form-details table td{
+    font-size: 1.5em;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+    padding: 1em;
+}
+.message-show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: white;
+        position: absolute;
+        top: 15%;
+        left: 14%;
+        width: 85%;
+        z-index: -1;
+        display: none;
+}
+.message-show .child-message-show{
+    width: 80vw;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.child-message-show ul li{
+  list-style: none;
+}
+.child-message-show ul li p{
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: normal;
 }

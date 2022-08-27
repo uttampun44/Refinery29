@@ -15,19 +15,40 @@
         <img src="../img/logo-removebg-preview.png">
         <label id="techin">TechnIn</label>
         <!-- ------------login form------------ -->
-           <form class="forms" action="dashboard.php">
+           <form class="forms" method="POST">
         <label>Username:</label>
-            <input type="text" placeholder="Username" required = true>
+            <input type="text" placeholder="Username" required = true name="username">
        <br>
        <label>Password:</label>
-        <input type="password" placeholder="Password" required= true id="password">
+        <input type="password" placeholder="Password" required= true id="password" name="password">
         <br>
-        <button id="sign">Log In</button>
+        <button id="sign" name="login" onclick= "return Dashboard()">Log In</button>
         <a href="#" >Forgot Your Password</a>
         <br>
-        <a href="#">Sign In</a>
+        <a href="#" name="sign">Sign In</a>
         </form>
             </div>
    </div>
+
+   <?php 
+
+      if(isset($_POST['login'])){  
+        $username = $_POST['username'];
+        $password = $_POST['password']; 
+         if(($username == "admin") && ($password == "techin")){
+           
+            header('location: dashboard.php');
+         }else{
+            
+         }
+      }
+    
+   ?>
+   <script type="text/javascript">
+    function Dashboard(){
+        alert("Login Successful");
+        return true;
+    }
+   </script>
 </body>
 </html>

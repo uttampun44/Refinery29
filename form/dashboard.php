@@ -11,30 +11,34 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <!-- stylesheet -->
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
 </head>
 <body>
     <nav>
         <div class="logo">
             <img src="../img/logo-removebg-preview.png">
-            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-bars" aria-hidden="true" id="hamburger"></i></a>
         </div>
         <div class="nav-sign-out">
-            <input type="text">
-            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <input type="text" placeholder="search" id="search-box">
+            <a href="#"><i class="fa fa-search" aria-hidden="true" id="search"></i></a>
             <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </div>
     </nav>
     <main>
         <div class="side-bar">
            <ul>
-            <li><a href="#"><i>Check Form Details</i></a></li>
-            <li><a href="#"><i>Message</i></a></li>
+           <li><a href="#" id="dashboard"><i>Dashboard</i></a></li>
+            <li><a href="#" id="checkforms"><i>Check Form Details</i></a></li>
+            <li><a href="#" id="message"><i>Message</i></a></li>
            </ul>
         </div>
         <div class="form-message">
             <div class="form-section">
                 <a href="#"><i class="fa fa-wpforms" aria-hidden="true"></i></a>
-                <h1>Total Form Submit</h1>
+                <h1>Total Form submit</h1>
+
             </div>
             <div class="message-section">
             <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
@@ -54,16 +58,30 @@
                     <th>Gender</th>
                     <th>Phone</th>
                     <th>Address</th>
+                    <th>Delete</th>
+                    <th>Update</th>
                 </tr>
+                <?php 
+                 include "connection.php";
+            
+                 $displaytable = "SELECT *FROM courseform";
+                 $sql_data = mysqli_query($database_connection, $displaytable);
+                
+                 while($dataresult = mysqli_fetch_assoc($sql_data)){   
+
+                ?>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $dataresult['ID']?></td>
+                    <td><?php echo $dataresult['FullName']?>
+                    <td><?php echo $dataresult['Email']?></td>
+                    <td><?php echo $dataresult['Course']?></td>
+                    <td><?php echo $dataresult['Gender']?></td>
+                    <td><?php echo $dataresult['Phone']?></td>
+                    <td><?php echo $dataresult['Address']?></td>
+                    <td><a href="#"><i class="fa fa-trash"></i></a></td>
+                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                 </tr>
+                <?php } ?>
             </table>
           </div>
         </div>
@@ -77,9 +95,32 @@
           </div>
         </div>
 
-        <?php
-        include 'connection.php'; 
-        ?>
     </main>
+
+     <script type="text/javascript">
+      
+    //   -----------form details-------------
+      $('#checkforms').click(function(){
+       $('.form-details').show();
+        $('.form-message').hide();
+      });
+
+    //    --------------------dashboard----------------
+      $('#dashboard').click(function(){
+        $('.form-message').show();
+        $('.form-details').hide();
+      })
+
+    //   ------------search button-------------
+      $('#search').click(function(){
+        $('#search-box').toggle();
+      })
+
+      $('#hamburger').click(function(){
+        $('.side-bar').toggle();
+        // $('.side-bar').width("slide,[width:100vw]");
+      })
+      
+     </script>
 </body>
 </html>
